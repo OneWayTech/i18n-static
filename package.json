@@ -1,0 +1,25 @@
+{
+  "name": "universal-i18n-solution",
+  "description": "Universal i18n solution for static resource",
+  "author": "Ken Berkeley <kenberkeley@foxmail.com>",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenberkeley/universal-i18n-solution.git"
+  },
+  "keywords": [
+    "i18n"
+  ],
+  "dependencies": {
+    "fs-extra": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-replace": "^0.5.4",
+    "recursive-readdir-sync": "^1.0.6",
+    "sugar": "^2.0.4"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
