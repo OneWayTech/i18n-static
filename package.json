@@ -11,7 +11,10 @@
     "build2": "browserify example/src/app2.js -o example/dist/__build__/app2.min.js",
     "build": "npm run build1 && npm run build2",
     "i18n": "node example/i18n.js",
-    "example": "npm run build && npm run i18n"
+    "example": "npm run build && npm run i18n",
+    "lint": "jshint lib",
+    "pretest": "npm run lint",
+    "test": "node test/"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
   },
   "devDependencies": {
     "browserify": "^14.1.0",
+    "jshint": "^2.9.4",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.0",
     "uglifyify": "^3.0.4"

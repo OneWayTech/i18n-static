@@ -1,0 +1,57 @@
+{
+  "i18nContent": {
+    "你好": {
+      "en": "Hello",
+      "jp": "こんにちは",
+      "fr": "Bonjour"
+    },
+    "热爱": {
+      "en": "Love",
+      "jp": "熱愛",
+      "fr": "Aimer"
+    },
+    "中国": {
+      "en": "China",
+      "jp": "中国",
+      "fr": "Chine"
+    },
+    "苹果": {
+      "en": "Apple",
+      "jp": "リンゴ",
+      "fr": "Pommes"
+    },
+    "国际": {
+      "en": "International",
+      "jp": "国際",
+      "fr": "International"
+    },
+    "好的": {
+      "en": "Well"
+    }
+  },
+  "locales": {
+    "en": {
+      "你好": "Hello",
+      "热爱": "Love",
+      "中国": "China",
+      "苹果": "Apple",
+      "国际": "International",
+      "好的": "Well"
+    },
+    "jp": {
+      "你好": "こんにちは",
+      "热爱": "熱愛",
+      "中国": "中国",
+      "苹果": "リンゴ",
+      "国际": "国際"
+    },
+    "fr": {
+      "你好": "Bonjour",
+      "热爱": "Aimer",
+      "中国": "Chine",
+      "苹果": "Pommes",
+      "国际": "International"
+    },
+    "zh-cn": {}
+  }
+}
