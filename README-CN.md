@@ -120,10 +120,11 @@ i18n({
 还有就是 `sourceLang` 与 `defaultLang` 的区别：
 * `sourceLang`，源语言，即 `_#XXX#_` 直接生成 `XXX`，无需翻译
 * `defaultLang`，默认翻译语言，即 `<i18n>{ 'XXX': 'XXX-default' }</i18n>` 等同于 `<i18n>{ 'XXX': { [defaultLang]: 'XXX-default' } }</i18n>`（应用见 `example/src/main/main1.js`）
+
 > `defaultLang` 适用于仅提供两种语言版本的应用场景
 
 最后就是 `saveLocalesTo`，即翻译表的保存路径，用于人工核对翻译，且有利于提高处理效率  
-皆因我们的 `i18n` 工具的调用方式实际上为 `i18n(<config>, <locales>?)`，其中 `locales` 参数可选  
+皆因我们的 `i18n` 工具的调用方式实际上为 `i18n(<config>, <locales?>)`，其中 `locales` 参数可选  
 若提供该参数，则直接使用该翻译表而非重新遍历 `srcDir` 提取  
 对于待翻译内容不常更改的项目而言，此举可减少一些编译耗时
 
