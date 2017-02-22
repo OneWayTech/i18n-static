@@ -5,13 +5,13 @@
   "version": "0.1.0",
   "main": "lib/",
   "scripts": {
-    "clean": "rimraf test/dist",
-    "prebuild": "npm run clean && mkdirp test/dist/__build__",
-    "build1": "browserify test/src/app1.js -o test/dist/__build__/app1.min.js",
-    "build2": "browserify test/src/app2.js -o test/dist/__build__/app2.min.js",
+    "clean": "rimraf example/dist",
+    "prebuild": "npm run clean && mkdirp example/dist/__build__",
+    "build1": "browserify example/src/app1.js -o example/dist/__build__/app1.min.js",
+    "build2": "browserify example/src/app2.js -o example/dist/__build__/app2.min.js",
     "build": "npm run build1 && npm run build2",
-    "i18n": "node test/i18n.js",
-    "test": "npm run build && npm run i18n"
+    "i18n": "node example/i18n.js",
+    "example": "npm run build && npm run i18n"
   },
   "repository": {
     "type": "git",
