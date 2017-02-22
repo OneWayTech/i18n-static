@@ -1,5 +1,18 @@
 {
   "i18nContent": {
+    "欢迎": {
+      "en": "Welcome",
+      "jp": "歓迎",
+      "fr": "Bienvenue"
+    },
+    "语言 - 中文": {
+      "en": "Language - English",
+      "jp": "言語 - 日本語",
+      "fr": "Langue - Français"
+    },
+    "好的": {
+      "en": "Well"
+    },
     "你好": {
       "en": "Hello",
       "jp": "こんにちは",
@@ -24,21 +37,22 @@
       "en": "International",
       "jp": "国際",
       "fr": "International"
-    },
-    "好的": {
-      "en": "Well"
     }
   },
   "locales": {
     "en": {
+      "欢迎": "Welcome",
+      "语言 - 中文": "Language - English",
+      "好的": "Well",
       "你好": "Hello",
       "热爱": "Love",
       "中国": "China",
       "苹果": "Apple",
-      "国际": "International",
-      "好的": "Well"
+      "国际": "International"
     },
     "jp": {
+      "欢迎": "歓迎",
+      "语言 - 中文": "言語 - 日本語",
       "你好": "こんにちは",
       "热爱": "熱愛",
       "中国": "中国",
@@ -46,6 +60,8 @@
       "国际": "国際"
     },
     "fr": {
+      "欢迎": "Bienvenue",
+      "语言 - 中文": "Langue - Français",
       "你好": "Bonjour",
       "热爱": "Aimer",
       "中国": "Chine",

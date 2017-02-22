@@ -2,4 +2,4 @@
 console.log('_#你好#_');
 
 // <i18n>{ '热爱': { 'en': 'Love', 'jp': '熱愛', 'fr': 'Aimer' } }</i18n>
-alert('_#热爱#_');
+console.log('_#热爱#_');

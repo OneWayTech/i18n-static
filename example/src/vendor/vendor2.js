@@ -12,4 +12,4 @@
 console.log('_#中国#_');
 
 // <i18n>{ '苹果': { 'en': 'Apple' /* This is a comment */, jp: 'リンゴ', fr: 'Pommes' } }</i18n>
-alert('_#苹果#_');
+console.log('_#苹果#_');
