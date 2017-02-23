@@ -28,7 +28,8 @@
     "gulp-debug": "^3.1.0",
     "gulp-replace": "^0.5.4",
     "recursive-readdir-sync": "^1.0.6",
-    "sugar": "^2.0.4"
+    "sugar": "^2.0.4",
+    "yamljs": "^0.2.8"
   },
   "devDependencies": {
     "browserify": "^14.1.0",

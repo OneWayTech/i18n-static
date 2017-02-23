@@ -1,7 +1,7 @@
 {
   "i18nContent": {
     "欢迎": {
-      "en": "Welcome",
+      "en": "Welcom",
       "jp": "歓迎",
       "fr": "Bienvenue"
     },
@@ -9,9 +9,6 @@
       "en": "Language - English",
       "jp": "言語 - 日本語",
       "fr": "Langue - Français"
-    },
-    "好的": {
-      "en": "Well"
     },
     "你好": {
       "en": "Hello",
@@ -23,9 +20,14 @@
       "jp": "熱愛",
       "fr": "Aimer"
     },
+    "国际": {
+      "en": "International",
+      "jp": "国際",
+      "fr": "International"
+    },
     "中国": {
-      "en": "China",
-      "jp": "中国",
+      "en": "China,",
+      "jp": "中国,",
       "fr": "Chine"
     },
     "苹果": {
@@ -33,40 +35,46 @@
       "jp": "リンゴ",
       "fr": "Pommes"
     },
-    "国际": {
-      "en": "International",
-      "jp": "国際",
-      "fr": "International"
+    "好的": {
+      "en": "Well"
+    },
+    "时间": {
+      "en": "Time",
+      "jp": "時間",
+      "fr": "Le temps"
     }
   },
   "locales": {
     "en": {
-      "欢迎": "Welcome",
+      "欢迎": "Welcom",
       "语言 - 中文": "Language - English",
-      "好的": "Well",
       "你好": "Hello",
       "热爱": "Love",
-      "中国": "China",
+      "国际": "International",
+      "中国": "China,",
       "苹果": "Apple",
-      "国际": "International"
+      "好的": "Well",
+      "时间": "Time"
     },
     "jp": {
       "欢迎": "歓迎",
       "语言 - 中文": "言語 - 日本語",
       "你好": "こんにちは",
       "热爱": "熱愛",
-      "中国": "中国",
+      "国际": "国際",
+      "中国": "中国,",
       "苹果": "リンゴ",
-      "国际": "国際"
+      "时间": "時間"
     },
     "fr": {
       "欢迎": "Bienvenue",
       "语言 - 中文": "Langue - Français",
       "你好": "Bonjour",
       "热爱": "Aimer",
+      "国际": "International",
       "中国": "Chine",
       "苹果": "Pommes",
-      "国际": "International"
+      "时间": "Le temps"
     },
     "zh-cn": {}
   }

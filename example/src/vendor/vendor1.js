@@ -1,5 +1,4 @@
-// <i18n>{ '你好': { 'en': 'Hello', 'jp': 'こんにちは', 'fr': 'Bonjour' } }</i18n>
-console.log('_#你好#_');
-
-// <i18n>{ '热爱': { 'en': 'Love', 'jp': '熱愛', 'fr': 'Aimer' } }</i18n>
-console.log('_#热爱#_');
+// <i18n>{ '好的': 'Well' }</i18n> 
+// the above is equal to { '好的': { 'en': 'Well' } }, since we set defaultLang = 'en'
+// translations for `jp` and `fr` are missing on purpose, so just remain the same
+console.log('_#好的#_');
