@@ -94,7 +94,7 @@ function show(o){console.log("Show "+o+" items per pages")}
 
 首先我们来分析一下 [`package.json`](./package.json) 里面的 `npm scripts`：
 
-```json
+```
 "scripts": {
   # 删除原有的 build 目录
   "clean": "rimraf example/dist",
@@ -384,7 +384,6 @@ module.exports = {
 
 ## § 注意事项
 
-* 本方案虽然使用了 Gulp，但对开发者是不透明的，仅仅就是一个普通工具罢了
 * 注意 `i18nContent` 与 `locales` 的区别
 * `conf.locales` 可以是文件路径（支持 YAML / JS object / JSON 格式），也可以直接就是翻译表
 * 以下示例会导致提取的失败，因为 `<i18n>` 与 `</i18n>` 之间的掺入了 5 个不可解析的 `*`
