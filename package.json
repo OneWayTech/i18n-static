@@ -1,5 +1,5 @@
 {
-  "name": "universal-i18n-solution",
+  "name": "i18n-static",
   "description": "Universal i18n solution for static resource",
   "author": "Ken Berkeley <kenberkeley@foxmail.com>",
   "version": "0.1.0",
@@ -20,7 +20,9 @@
     "url": "https://github.com/kenberkeley/universal-i18n-solution.git"
   },
   "keywords": [
-    "i18n"
+    "universal",
+    "i18n",
+    "static"
   ],
   "dependencies": {
     "fs-extra": "^2.0.0",

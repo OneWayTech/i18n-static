@@ -1,7 +1,10 @@
 # 通用的国际化方案
 
+> Intellectual property of [OneWay](https://www.oneway.mobi)  
+> 强烈建议 Chrome 用户安装 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)、[Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf?utm_source=chrome-app-launcher-info-dialog)、[OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp) 插件以提高阅读体验
+
 ## § 快速体验
-定界符 `_#` 与 `#_` 包裹的 `XXX` 为**待翻译内容**，而 `<i18n>` 标签内容为其对应的**译文**（支持 YAML / JS 对象 / JSON 三种格式）
+定界符 `_#` 与 `#_` 包裹的 `XXX` 为**待翻译内容**，而 `<i18n>` 内容为其对应的**译文**（支持 YAML / JS 对象 / JSON 三种格式）：
 
 ```js
 function show(num) {
@@ -17,7 +20,7 @@ function show(num) {
 function show(o){console.log("Show "+o+" items per pages")}
 ```
 
-> **待翻译内容** 及 **译文** 的定界符都是可配置的
+> **待翻译内容** 和 **译文** 的定界符都是可配置的
 
 ## § 灵感来源
 试想，如果让您把公司所有的项目都支持国际化，会是一种怎么样的体验？  
@@ -78,7 +81,7 @@ function show(o){console.log("Show "+o+" items per pages")}
 ```
 其配备的 [`vux-loader`](https://github.com/airyland/vux-loader) 可以解析 `<i18n>` 内容，来对当前组件中的待翻译内容进行替换  
 这样的话就完美地解决了单独维护翻译表的问题，且由于都在同一上下文中，因此更改与校对都显得非常方便！  
-`vux-loader` 之所以能这么做，主要是因为 [`vue-loader`](https://github.com/vuejs/vue-loader/) 只在乎 `<template>`、`<script>`、`<style>`，其他的都**忽略**  
+`vux-loader` 之所以能这么做，是因为 [`vue-loader`](https://github.com/vuejs/vue-loader/) 只在乎 `<template>`、`<script>`、`<style>`，其他的都**忽略**  
 这给了我很大的启发！
 
 由于前端的特殊性，线上的代码一般都需要经过压缩处理，因此我们还可以更进一步：  
@@ -86,8 +89,8 @@ function show(o){console.log("Show "+o+" items per pages")}
 
 > 当然也完全可以像 `vux-loader` 那样，把一个文件中所有待翻译内容集中到最后进行翻译
 
-进行国际化的时候，只需要**递归提取**源码目录中散落的翻译表，即可获得最终的翻译表  
-而且我们还能将翻译表保存下来，既满足高可维护性，又满足传统方案的整体校对需求
+进行国际化的时候，只需要提取源码目录中散落的翻译表，即可获得最终的翻译表  
+我们还能将翻译表保存下来，既满足高可维护性，又满足传统方案的**整体校对**需求
 
 ## § 流程详解
 我们使用 [`example/`](./example) 下的这个简单的例子来说明本国际化方案的流程  
@@ -190,17 +193,17 @@ i18n({
 * `saveLocalesTo`，即翻译表的保存路径，用于人工核对翻译，且有利于*提高处理效率*
 
 > 为什么说可以**提高处理效率**？  
-> 皆因 `i18n(options)` 函数还能接受 `options.locales` 配置  
+> 皆因 `i18n(conf)` 函数还能接受 `conf.locales` 配置  
 > 若提供该参数，则直接使用该翻译表而非重新遍历 `srcDir` 提取  
 > 对于待翻译内容不常更改的项目而言，此举可减少一些编译耗时
 
 配置讲完了，接下来是国际化三步走：
 
 #### ⑴ 提取
-从 `srcDir` 中递归提取出所有 `<i18n>` 标签的内容进行解析合并：
+从 `srcDir` 中递归提取出所有 `<i18n>` 的内容进行解析合并（称为 `i18nContent`）：
 
 ```json
-"i18nContent": {
+{
   "欢迎": {
     "en": "Welcom",
     "jp": "歓迎",
@@ -248,10 +251,10 @@ i18n({
 ```
 
 #### ⑵ 转换
-将上述内容转换成翻译表：
+将上述内容转换成翻译表（称为 `locales`）：
 
 ```json
-"locales": {
+{
   "en": {
     "欢迎": "Welcom",
     "语言 - 中文": "Language - English",
@@ -288,7 +291,7 @@ i18n({
 ```
 
 > 由于 `sourceLang` 设置为 `zh-cn`，因此 `locales['zh-cn']` 为空，表示不翻译  
-> 当然还有 `locales.jp` 与 `locales.fr` 都缺少 `好的` 的译文，因此也是不翻译
+> 当然还有 `locales.jp` 与 `locales.fr` 都缺少「`好的`」的译文，因此也是不翻译
 
 #### ⑶ 替换
 最后，就是根据翻译表对 `example/dist/__build__/` 进行翻译，最终生成：
@@ -336,10 +339,6 @@ srcDir ────────────────────────�
 
 > 由上图 `⑶` 可知，我们实际上是借助 Gulp + [`gulp-replace`](https://github.com/lazd/gulp-replace) 强大的流并行处理能力来进行文本的替换
 
-***
-
-***
-
 ## § 使用说明
 调用的方式很简单：`i18n(conf)`，而 `conf` 的配置项定义见 [`lib/conf/conf-def.js`](./lib/conf/conf-def.js)：
 
@@ -384,8 +383,9 @@ module.exports = {
 
 ## § 注意事项
 
-* 注意 `i18nContent` 与 `locales` 的区别
+* 本项目并不是一个 Gulp 插件，完全可以独立使用
 * `conf.locales` 可以是文件路径（支持 YAML / JS object / JSON 格式），也可以直接就是翻译表
+* 自定义的 `conf.regDelimeter` 与 `conf.regI18nContent` 都需要带上 `g` 以进行全局匹配
 * 以下示例会导致提取的失败，因为 `<i18n>` 与 `</i18n>` 之间的掺入了 5 个不可解析的 `*`
 
 ```js
@@ -429,4 +429,3 @@ module: {
   }]
 }
 ```
-
