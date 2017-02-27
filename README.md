@@ -1,4 +1,4 @@
-# 通用的国际化方案
+# 通用的静态资源国际化方案
 
 > Intellectual property of [OneWay](https://www.oneway.mobi)  
 > 强烈建议 Chrome 用户安装 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)、[Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf?utm_source=chrome-app-launcher-info-dialog)、[OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp) 插件以提高阅读体验

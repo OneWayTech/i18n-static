@@ -2,7 +2,7 @@
   "name": "i18n-static",
   "description": "Universal i18n solution for static resource",
   "author": "Ken Berkeley <kenberkeley@foxmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/",
   "scripts": {
     "clean": "rimraf example/dist",
