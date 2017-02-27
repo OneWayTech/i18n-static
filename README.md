@@ -340,7 +340,14 @@ srcDir ────────────────────────�
 > 由上图 `⑶` 可知，我们实际上是借助 Gulp + [`gulp-replace`](https://github.com/lazd/gulp-replace) 强大的流并行处理能力来进行文本的替换
 
 ## § 使用说明
-调用的方式很简单：`i18n(conf)`，而 `conf` 的配置项定义见 [`lib/conf/conf-def.js`](./lib/conf/conf-def.js)：
+首先安装：`npm i -D i18n-static`，再引入：
+
+```js
+var i18n = require('i18n-static');
+i18n(<conf>);
+```
+
+上述 `conf` 的配置项定义见 [`lib/conf/conf-def.js`](./lib/conf/conf-def.js)，如下所示：
 
 ```js
 module.exports = {
@@ -379,6 +386,31 @@ module.exports = {
   // if the translations do not change frequently, you can save locales to speed up i18n process
   saveLocalesTo: { type: 'string|boolean|null|undefined', default: null, required: false }
 };
+```
+
+***
+
+一般是在 Webpack / Gulp 构建完成后使用：
+
+```js
+// Webpack
+webpack(<Webpack config>, function (err, stat) {
+  if (err) return console.error(err);
+
+  // show build info to console
+  console.log(stats.toString({ chunks: false, color: true }));
+
+  i18n(<i18n conf>);
+});
+
+// Gulp
+gulp.task('build', function () {
+  return gulp.src(...)
+    .pipe(...)
+    .on('end', function () {
+      i18n(<i18n conf>);
+    });
+});
 ```
 
 ## § 注意事项
