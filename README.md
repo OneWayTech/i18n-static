@@ -1,5 +1,7 @@
 # 通用的静态资源国际化方案
 
+## 2018.1 更新：[simplest-i18n](https://github.com/OneWayTech/simplest-i18n)
+
 > Intellectual property of [OneWay](https://www.oneway.mobi)  
 > 强烈建议 Chrome 用户安装 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)、[Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf?utm_source=chrome-app-launcher-info-dialog)、[OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp) 插件以提高阅读体验
 
